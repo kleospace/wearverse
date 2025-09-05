@@ -20,5 +20,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
-
+Route::get('/stylbooks', [StylbookController::class, 'index'])->name('stylbooks.index');
 require __DIR__.'/auth.php';
